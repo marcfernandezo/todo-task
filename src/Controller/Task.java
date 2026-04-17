@@ -45,4 +45,8 @@ public class Task {
     public void setDate(int date) {
         this.date = date;
     }
+
+    public String toCSV() {
+        return id + "," + name + "," + description + "," + date;
+    }
 }
