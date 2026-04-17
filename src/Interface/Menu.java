@@ -1,9 +1,12 @@
 package Interface;
 
+import Controller.Task;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
-    public static void menu() {
+    public static void menu(ArrayList<Task> tasks) {
         Scanner sc = new Scanner(System.in);
         int option = 0;
 
@@ -36,4 +39,6 @@ public class Menu {
             }
         } while (option != 5);
     }
+
+
 }

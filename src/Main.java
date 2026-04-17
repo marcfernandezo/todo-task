@@ -10,6 +10,6 @@ public class Main {
         ArrayList< Task> tasks = new ArrayList<>();
 
         File file = new File("src/data-tasks.csv");
-        Menu.menu();
+        Menu.menu(tasks);
     }
 }
