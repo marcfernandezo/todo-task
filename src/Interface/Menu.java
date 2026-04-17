@@ -23,7 +23,7 @@ public class Menu {
 
             try {
                 option = sc.nextInt();
-                sc.nextLine(); // Limpiar buffer
+                sc.nextLine();
 
                 switch (option) {
                     case 1: agregarTarea(tasks); break;
@@ -34,14 +34,13 @@ public class Menu {
                     default: System.out.println("Opción no válida.");
                 }
 
-                // PASO 2: Guardar cambios en el archivo después de cada acción
                 if (option >= 1 && option <= 3) {
                     guardarDatos(tasks, file);
                 }
 
             } catch (Exception e) {
                 System.out.println("Error: Introduce un número válido.");
-                sc.nextLine(); // Evitar bucle infinito si meten una letra
+                sc.nextLine();
             }
         } while (option != 5);
     }
@@ -102,8 +101,6 @@ public class Menu {
         }
         System.out.println("❌ ID no encontrado.");
     }
-
-    // --- MÉTODOS DE PERSISTENCIA (FILE) ---
 
     private static void guardarDatos(ArrayList<Task> tasks, File file) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(file))) {
