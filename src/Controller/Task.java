@@ -1,12 +1,13 @@
 package Controller;
 
-public class EditTask {
+public class Task {
+
     private int id;
     private String name;
     private String description;
     private int date;
 
-    public EditTask(int id, String name, String description, int date) {
+    public Task(int id, String name, String description, int date) {
         this.id = id;
         this.name = name;
         this.description = description;
